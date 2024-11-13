@@ -1,8 +1,4 @@
-/node_modules
-node_modules
+app/node_modules
+app/.env
 .idea
 .DS_Store
-/.env
-/env
-.env
-env
