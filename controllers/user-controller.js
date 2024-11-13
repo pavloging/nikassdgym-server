@@ -4,6 +4,14 @@ const { validationResult } = require('express-validator');
 const ApiError = require('../exceptions/api-error');
 
 class UserController {
+    async status(req, res, next) {
+        try {
+            return res.json(true);
+        } catch (e) {
+            next(e);
+        }
+    }
+
     async registration(req, res, next) {
         try {
             const errors = validationResult(req);

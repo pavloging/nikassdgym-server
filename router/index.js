@@ -4,6 +4,7 @@ const router = new Router();
 const authMiddleware = require('../middlewares/auth-middleware');
 const authValidation = require('../middlewares/validations.js');
 
+router.get('/status', userController.status);
 router.post('/registration', authValidation, userController.registration);
 router.post('/login', authValidation, userController.login);
 router.post('/logout', userController.logout);
