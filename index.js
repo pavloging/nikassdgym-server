@@ -20,7 +20,7 @@ app.use(cookieParser());
 app.use(
     cors({
         credentials: true,
-        origin: process.env.CLIENT_URL,
+        origin: [process.env.CLIENT_URL, 'https://nikassdgym-client.vercel.app'],
     })
 );
 app.use('/api', router);
